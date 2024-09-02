@@ -1,0 +1,1270 @@
+@import url(animations.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    transition: .2s ease;
+    font-family: 'Architects Daughter';
+    scrollbar-color: #000000c1 transparent;
+    scrollbar-width: thin;
+}
+
+.app{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../public/images/what3.png");
+    background-repeat: repeat;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+main {
+    width: 100%;
+    padding: max(3%, 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* LOGO */
+.logo{
+    position: relative;
+    width: 300px;
+    padding: 4px;
+    
+}
+
+.logo a{
+    font-family: 'Architects Daughter';
+    font-size: 2.4em;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+    animation: left-transition 2s forwards ease;
+}
+
+/* .logo a:hover{
+
+} */
+
+
+
+.logo img{
+    max-width: 300px;
+    filter: contrast(.8);
+}
+
+/* NAV */
+nav{
+    width: 150px;
+    height: 150px;
+}
+
+nav img{
+    display: none;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: bottom-to-top-transition 2s forwards ease;
+    padding: 20px 0px;
+}
+
+nav ul li{
+    display: block;
+    list-style: none;
+    text-align: center;
+    margin: 3px 0px;
+    padding: 0px 5px;
+}
+
+nav ul li:hover{
+    transform: scale(1.1);
+    transition: ease-in-out .1s;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-family: "Architects daughter";
+    font-size: 1em;
+    font-weight: 800;
+    transition: ease-in-out .1s;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover{
+    color: #c4b286;
+    cursor: pointer;
+    border-bottom: 2px #c4b286 solid;
+}
+
+/* TEXTBOX */
+.text-box{
+    position: relative;
+    width: 600px;
+    height: 250px;
+    top: 25px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.quotes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    overflow: hidden;
+  }
+
+.quotes h2{
+    font-family: "Architects daughter";
+    font-size: 2.4em;
+    color: #000000;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.quote{
+    position: relative;
+    animation: move 30s 5s infinite ease;
+    margin-bottom: 200px;
+
+}
+
+
+
+
+/* Icons */
+.saitama{
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+.naruto{
+    position: absolute;
+    top: 200px;
+    left: 25%;
+}
+
+.lol{
+    position: absolute;
+    top: 205px;
+    right: 25%;
+}
+
+.origami{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    /* transform: rotateX('90deg'); */
+}
+
+.naruto-sign{
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.feather{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 80px;
+}
+
+.football{
+    position: absolute;
+    border-radius: 50%;
+    top: 104px;
+    left: -80px;
+    width: 20px;
+    background-color: none;
+}
+
+.volleyball{
+    position: absolute;
+    border-radius: 50%;
+    top: 104px;
+    right: -80px;
+    width: 20px;
+    background-color: none;
+
+}
+
+.volleyball:hover, .football:hover{
+    transform: translateY(-30px);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.text-box img:hover{
+    cursor: pointer;
+}
+
+
+/* Oeuvre Component */
+.oeuvre{
+    position: relative;
+    margin-top: 85px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.oeuvre h2{
+    font-size: 2em;
+}
+
+.piece{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.piece a{
+    text-decoration: none;
+    color: #000000;
+    width: 100%;
+}
+
+.piece_img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.piece_img:hover{
+    box-shadow: 3px 3px 3px 3px #000000;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.piece_img:hover .piece:hover{
+    box-shadow: none;
+}
+
+.piece_about:hover {
+    box-shadow: 3px 3px 3px 3px #000000;
+    cursor: pointer;
+    /* animation: border-anim .3s ease-in-out forwards ; */
+}
+
+.piece_img img{
+    width: 200px;
+}
+
+.piece_about{
+    position: relative;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.piece_about h2{
+    font-size: 1.5em;
+}
+
+.piece_about p{
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+.piece_content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    left: 25%;
+}
+
+.piece_content .aside-note{
+    box-shadow: 1px 2px 2px 2px #00000099;
+    max-height: 500px;
+    background-color: #00000099;
+    transition: hinge .5s ease-in-out;
+
+}
+
+.close{
+    position: absolute;
+    max-width: 15px;
+    top: 15px;
+    right: 20px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.piece_content h2{
+    position: absolute;
+    top: 10px;
+    font-size: 1.6em;
+}
+
+.piece_content p{
+    position: absolute;
+    top: 45px;
+    width: 90%;
+    line-height: 1.78em;
+    font-size: .9em;
+}
+
+
+/* ANIMATIONS */
+
+
+
+ .lol {
+    animation: bounce2 2s ease infinite;
+}
+
+.feather{
+    transform-origin: top center;
+	animation: swing 2s ease infinite;
+}
+
+.origami {
+	backface-visibility: visible !important;
+	animation: flip 2s ease infinite;
+}
+
+.saitama {
+    animation: gelatine 0.9s infinite;
+  }
+
+.naruto {
+  animation: gelatine 0.9s ease infinite;
+}
+
+.piece {
+    animation: fade-in-left 1s ease;
+  }
+
+.text-box {
+    animation: fade-in 5s ease;
+}
+
+footer{
+    margin-top: 60px;
+    font-size: .8em;
+}
+      
+
+/* Responsiveness */
+
+@media (max-width: 768px) {
+
+    .logo{
+        padding-top: 10px;
+    }
+
+    .logo a{
+        font-size: 2em;
+    }
+
+    nav ul li{
+        display: block;
+        list-style: none;
+        text-align: center;
+        margin: 3px 0px;
+    }
+
+    nav ul li a{
+        font-size: .9em;
+    }
+
+    .text-box{
+        width: 400px;
+        height: 250px;
+        margin-top: 87px;
+    }
+
+    .quote{
+        animation: move-768 30s 5s infinite ease;
+    }
+
+    .quotes h2{
+        font-size: 2em;
+        line-height: 1.89em;
+    }
+
+
+
+    /* ICONS */
+    .icon{
+        max-width: 40px;
+    }
+
+    .saitama{
+        position: absolute;
+        top: -55px;
+        right: 0;
+    }
+    
+    .naruto{
+        position: absolute;
+        top: 260px;
+        left: 25%;
+    }
+    
+    .lol{
+        position: absolute;
+        top: 265px;
+        right: 25%;
+    }
+    
+    .origami{
+        position: absolute;
+        top: -60px;
+        left: 48%;
+        width: 35px;
+    }
+
+    .feather{
+        position: absolute;
+        top: -55px;
+        left: 0;
+    }
+
+    /* oeuvre */
+    .oeuvre{
+        margin-top: 90px;
+        gap: 20px;
+    }
+
+    .piece_about h2{
+        font-size: 1.2em;
+    }
+
+    .piece_about p{
+        font-size: 0.9em;
+        line-height: 2em;
+    }
+
+    .piece_content{
+        left: 15%;
+    }
+
+    .piece_content .aside-note{
+        max-height: 400px;
+    }
+
+    .piece_content p{
+        top: 40px;
+        line-height: 1.6;
+        font-size: .8em;
+    }
+}
+
+
+@media (max-width: 681px){
+
+    .oeuvre{
+        margin-top: 80px;
+    }
+
+    .piece{
+        margin-top: 15px;
+    }
+
+    .piece_about{
+        position: relative;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    
+    .piece_about h2{
+        margin-top: 28px;
+        font-size: 1.4em;
+    }
+    
+    .piece_about p{
+        font-size: .8em;
+        line-height: 2.2em;
+    }
+
+    .piece{
+        margin-top: 5px;
+    }
+
+    .piece_about h2{
+        margin-top: 0px;
+    }
+
+    .piece_content{
+        left: 10%;
+    }
+
+
+}
+
+
+
+@media (max-width: 638px){
+
+    .text-box{
+        width: 300px;
+        height: 250px;
+        margin-top: 60px;
+    }
+
+    .quotes h2{
+        font-size: 1.4em;
+        line-height: 2.6em;
+    }
+
+    .quote {
+        margin-bottom: 220px;
+        animation: move-638 30s 5s infinite ease;
+
+    }
+
+    .icon{
+        max-width: 30px;
+    }
+
+    .saitama{
+        top: -35px;
+        right: 0;
+    }
+    
+    .naruto{
+        top: 240px;
+        left: 25%;
+    }
+    
+    .lol{
+        top: 245px;
+        right: 25%;
+    }
+    
+    .origami{
+        top: -45px;
+        left: 48%;
+        width: 35px;
+    }
+
+    .feather{
+        top: -35px;
+        left: 0;
+    }
+
+    .gif{
+        width: 15px;
+    }
+    .volleyball{
+        top: 110px;
+        right: -50px;
+    }
+
+    .football{
+        top: 110px;
+        left: -50px;
+    }
+
+    .oeuvre{
+        gap: 20px;
+    }
+
+    .piece{
+        margin-top: px;
+        height: 150px;
+    }
+
+    .piece_img{
+        width: 150px;
+    }
+    .piece_img img{
+        width: 150px;
+    }
+
+    .piece_about{
+        height: 150px;
+    }
+
+    .piece_about p{
+       font-size: .7em;
+    }
+
+
+    
+}
+
+@media (max-width: 611px){
+    nav .hide-nav .nav-menu{
+        display: block;
+        width: 40px;
+        position: absolute;
+        right: 0;
+        top: 12px;
+    }
+
+    nav .hide-nav .nav-menu:hover{
+        cursor: pointer;
+        transition: .2s ease-in-out;
+        filter: invert(.4);
+    }
+
+    nav .hide-nav .close-menu{
+        display: none;
+    }
+
+    nav .hide-nav ul{
+        display: none;
+    }
+
+    nav .show-nav{
+        animation: fade-in .2s ease-in-out;
+        overflow: hidden;
+    }
+
+    nav .show-nav .close-menu{
+        display: block;
+        width: 25px;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        z-index: 1;
+    }
+
+    nav .show-nav .close-menu:hover{
+        color: #c4b286;
+        cursor: pointer;
+        filter: invert(.4);
+    }
+
+    nav .show-nav ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 20px 0px;
+        margin-top: 25px;
+    }
+
+    nav ul li a{
+        font-size: .8em;
+    }
+    .piece{
+        margin-top: 23px;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 533px){
+
+    .piece{
+        margin-top: 15px;
+        height: 120px;
+    }
+
+    .piece_img{
+        width: 120px;
+    }
+    .piece_img img{
+        width: 120px;
+    }
+
+    .piece_about{
+        height: 120px;
+    }
+
+    .piece_about p{
+        margin-top: 12px;
+       font-size: .6em;
+    }
+
+    .piece_about h2{
+        font-size: 1.2em;
+    }
+
+    .piece_content{
+        left: 2%;
+    }
+
+    .piece_content .aside-note{
+        max-width: 400px;
+    }
+
+    .piece_content h2{
+        font-size: 1.2em;
+    }
+
+    .piece_content p{
+        font-size: .7em;
+        line-height: 1.73em;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 483px){
+
+    .logo{
+        padding-top: 20px;
+    }
+    .logo a{
+        font-size: 1.4em;
+    }
+
+
+    
+    .text-box{
+        width: 190px;
+        height: 200px;
+        margin-top: 50px;
+    }
+
+    .quotes h2{
+        font-size: 1em;
+        line-height: 1.6em;
+    }
+
+    .quote{
+        animation: move-425 30s 5s infinite ease;
+    }
+
+    /* ICONS */
+    .icon{
+        max-width: 20px;
+    }
+
+    .saitama{
+        top: -30px;
+        right: 0;
+    }
+    
+    .naruto{
+        top: 138px;
+        left: 25%;
+    }
+    
+    .lol{
+        top: 140px;
+        right: 25%;
+    }
+    
+    .origami{
+        top: -40px;
+        left: 48%;
+        width: 35px;
+    }
+
+    .feather{
+        top: -30px;
+        left: 0;
+    }
+
+    .gif{
+        width: 15px;
+    }
+    .volleyball{
+        top: 55px;
+        right: -50px;
+    }
+
+    .football{
+        top: 55px;
+        left: -50px;
+    }
+
+    /* Oeuvre Component */
+
+
+    .oeuvre{
+        margin-top: 10px;
+    }
+
+    .oeuvre h2{
+        font-size: 1.4em;
+    }
+
+    .piece{
+        width: auto;
+        height: auto;
+        margin-bottom: 10px;
+        gap: 5px;
+    }
+    .piece_img{
+        width: auto;
+        height: auto;
+    }
+
+    .piece_img img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .piece_img:hover{
+        box-shadow: 2px 2px 2px 2px #000000;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .piece_about{
+        height: auto;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .piece_about h2{
+        font-size: 1em;
+        margin-top: 15px;
+    }
+    
+    .piece_about p{
+        font-size: .7em;
+        line-height: 1.2em;
+        margin-top: 7px;
+    }
+
+    .piece_content{
+        left: 3%;
+    }
+
+    .close{
+        max-width: 10px;
+    }
+
+    .piece_content .aside-note{
+        max-width: 350px;
+    }
+
+    .piece_content h2{
+        font-size: 1em;
+    }
+
+    .piece_content p{
+        top: 30px;
+        font-size: .65em;
+        line-height: 1.67em;
+    }
+}
+
+@media (max-width : 425px) {
+    .piece_content{
+        left: 0%;
+    }
+}
+
+
+
+@media (max-width : 375px) {
+
+
+    .piece{
+        margin-top: 10px;
+    }
+
+
+    .piece_img{
+        height: 100px;
+
+    }
+
+    .piece_img img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .piece_about{
+        gap: 0px;
+        height: 100px;
+    }
+
+    .piece_about h2{
+        font-size: 1em;
+        margin-top: 15px;
+    }
+
+    .piece_about p{
+        font-size: .6em;
+        line-height: 1.4em;
+        margin-top: 10px;
+    }
+
+    .piece_content{
+        left: 0%;
+    }
+
+    .piece_content .aside-note{
+        max-width: 300px;
+    }
+
+    .piece_content p{
+        line-height: 1.8em;
+        font-size: .5em;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width : 320px) {
+
+    .piece{
+        margin-top: 25px;
+    }
+
+    .piece_img{
+        height: 120px;
+
+    }
+
+    .piece_about{
+        gap: 5px;
+        height: 120px;
+    }
+
+    .piece_about h2{
+        font-size: 1em;
+    }
+
+    .piece_about p{
+        margin-top: 0px;
+    }
+
+    .close{
+        top: 10px;
+        max-width: 8px;
+    }
+
+    .piece_content .aside-note{
+        max-width: 250px;
+    }
+
+    .piece_content h2{
+        top: 5px;
+    }
+
+    .piece_content p{
+        top: 25px;
+        font-size: .48em;
+        line-height: 1.58em;
+    }
+}
+
+@media (width:1024px) {
+    .oeuvre{
+        gap: 30px;
+    }
+    
+}
+
+@media (min-width: 1540px) {
+    .oeuvre{
+        margin-top: 75px;
+    }
+
+    .piece_content{
+        left: 28%;
+    }
+}
+
+@media (min-width: 1640px) {
+    .volleyball, .football{
+        top: 94px;
+    }
+
+    .oeuvre{
+        margin-top: 92px;
+        gap: 22px;
+
+    }
+
+    .piece_content{
+        left: 29%;
+    }
+}
+
+@media (min-width: 1740px) {
+
+
+    .oeuvre{
+        margin-top: 92px;
+        gap: 18px;
+
+    }
+}
+
+@media (min-width: 1940px) {
+    .oeuvre{
+        margin-top: 82px;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 2040px) {
+    main {
+        padding: 5%;
+    }
+
+    .logo{
+        width: 500px;
+    }
+
+    .logo a{
+        font-size: 4em;
+    }
+
+    nav ul{
+        padding: 3px;
+    }
+
+    nav ul li{
+        margin: 12px 0px;
+    }
+
+    nav ul li a{
+        font-size: 1.4em;
+    }
+
+    .text-box{
+        margin-top: 140px;
+    }
+
+    .oeuvre{
+        margin-top: 80px;
+        gap: 24px;
+    }
+
+    .oeuvre h2{
+        font-size: 2.4em;
+    }
+
+    .piece{
+        height: 300px;
+    }
+
+    .piece_img{
+        width: 300px;
+    }
+
+    .piece_img img{
+        width: 300px;
+    }
+
+    .piece_about{
+        height: 300px;
+    }
+
+    .piece_about h2{
+        font-size: 2em;
+    }
+
+    .piece_about p{
+        font-size: 1.2em;
+    }
+
+    .icon{
+        width: 80px;
+    }
+
+    .feather{
+        left: -20px;
+        top: -70px;
+        width: 90px;
+    }
+
+    .origami{
+        top: -150px;
+    }
+
+    .saitama{
+        right: -20px;
+        top: -70px;
+        width: 75px;
+    }
+
+    .football{
+        left: -150px;
+    }
+
+    .volleyball{
+        right: -150px;
+    }
+
+    .naruto{
+        top: 230px;
+        left: 15%;
+    }
+
+    .lol{
+        top: 235px;
+        right: 15%;
+    }
+
+    .close{
+        top: 18px;
+        max-width: 20px;
+    }
+
+    .piece_content{
+        left: 30%;
+    }
+
+    .piece_content .aside-note{
+        max-height: 800px;
+    }
+
+    .piece_content h2{
+        top: 5px;
+    }
+
+    .piece_content p{
+        top: 55px;
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+}
+
+@media (min-width: 2240px) {
+    .oeuvre{
+        margin-top: 84px;
+        gap: 27px;
+    }
+
+    .volleyball{
+        top: 98px;
+    }
+
+    .football{
+        top: 98px;
+    }
+
+    .piece_content{
+        left: 32%;
+    }
+}
+
+@media (min-width: 2340px) {
+    .oeuvre{
+        margin-top: 80px;
+        gap: 25px;
+    }
+
+    .volleyball{
+        top: 90px;
+    }
+
+    .football{
+        top: 90px;
+    }
+
+    .piece_content{
+        left: 33%;
+    }
+}
+
+
+@media (min-width: 2560px) {
+    .oeuvre{
+        margin-top: 84px;
+        gap: 25px;
+    }
+
+    .piece{
+        height: 300px;
+    }
+
+    .piece_about p{
+        font-size: 1.4em;
+        line-height: 1.24em;
+    }
+
+    .volleyball{
+        top: 108px;
+    }
+
+    .football{
+        top: 108px;
+    }
+
+    .close{
+        top: 18px;
+        max-width: 20px;
+    }
+
+    .piece_content{
+        left: 35%;
+    }
+
+    .piece_content .aside-note{
+        max-height: 800px;
+    }
+
+    .piece_content h2{
+        top: 5px;
+    }
+
+    .piece_content p{
+        top: 55px;
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+}
